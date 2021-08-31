@@ -545,9 +545,9 @@ person.printGender()
 // which filter expects
 // if the element is equal to one
 
-const filter = (...args) => {
-	return args.filter((el) => el === 1)
-}
+// const filter = (...args) => {
+// 	return args.filter((el) => el === 1)
+// }
 
 // now that might be a lot of syntax
 // that you don't build
@@ -564,12 +564,12 @@ const filter = (...args) => {
 // and let's console.log it to see something
 // console.log(filter)
 
-console.log(filter)
+// console.log(filter)
 
 // it's our filter function here
 // all I say is one, two, three
 
-console.log(filter(1, 2, 3))
+// console.log(filter(1, 2, 3))
 
 // and actually we should only log one year
 // as an array though
@@ -584,3 +584,158 @@ console.log(filter(1, 2, 3))
 
 // the usage of the three dots
 // you will see mo re often in this course
+
+// //// 8. Destructuring
+
+// So we learnt about rest and spread,
+// there is one generation feature I definitely
+// want to cover
+// called destructuring
+
+// Easily extract array elements
+// or object properties
+// and store them in variables
+
+// Destructuring allows you to easily
+// extract array elements
+// or object properties
+// and store them in variables
+// when you first hear about it
+// it might sound
+// the exact thing the spread operator does
+// but actually  is a different thing
+// spread takes out all elements
+// all properties
+// and distribute them in
+// a new array || object || whatever you are using
+
+// Destructuring allows you to pull out
+// single elements or properties
+// and store them in variables,
+// for arrays,
+// and objects.
+
+// For arrays it looks like this:
+
+// Array Destructuring:
+
+// [a,b] = ['Hello', 'Max']
+// console.log(a)//Hello
+// console.log(b)// Max
+
+// If we have an array with two elements
+// 'Hello' && 'Max', then we can use this
+// strange looking syntax on the left side
+// of the equal sign
+// which looks like that we are creating an array
+// but we are not
+// to assign the variables
+// 'a' && 'b'
+// to 'Hello' && 'Max' respectively.
+
+// and for object destructuring
+
+// Object Destructuring:
+
+// {name} = {name:'Max', age:28}
+// console.log(name)// Max
+// console.log(age)//undefined
+
+// is the same syntax with
+// curly braces &&
+// where in array destructuring
+// the order defines
+// which property we take,
+// for object destructuring
+// is the property name
+// curly brace 'name' curly brace
+// on the left side
+// targets the name property of the object
+// on the right side
+// && pulls out the value
+// which is why login age
+// will yield undefined
+// will not pulling this out of the object here
+// so this is destructuring
+// let's also have a look at this in practice.
+
+// Back in jsbin,
+// lets start with our numbers array again
+// which have the number one, two, and three
+
+// const numbers = [1,2,3]
+
+// and now lets say
+// we want to get the numbers one and two
+// then we can use this
+// array syntax on the left of the equal sign
+
+// []
+
+// and choose any variable names of our choice
+// num1, and num2
+
+// [num1, num2]
+
+// and we assign this to equal to the numbers array
+
+// [num1, num2] = numbers;
+
+// if I now console.log(num1, num2)
+
+// const numbers = [1, 2, 3]
+// ;[num1, num2] = numbers
+// console.log(num1, num2)
+
+// and I run this
+// you see one and two being logged
+
+// 1 2
+
+// because I am pulling these two out of the array
+// I am not pulling 'three'
+// if I want to get three by the way
+// I simply add num three 'num3' here,
+
+// const numbers = [1, 2, 3]
+// ;[num1, num3] = numbers
+// console.log(num1, num3)
+
+// you don't have to rename it though,
+// and you leave out the one space,
+
+// const numbers = [1, 2, 3]
+// ;[num1, , num3] = numbers
+// console.log(num1, num3)
+
+// with an empty space here in your
+// declaration on the left side
+// Now if you hit run you get one, and three
+
+// 1 3
+
+// That's array destructuring.
+
+// Object Destructuring
+// is also supported by our project
+// in this course
+// however is not supported by jsbin here
+// So, I can show it you
+// I show some text on the slide
+// It is the syntax where
+// you use the curly braces
+// on the left and target a property
+// with its property name
+
+// {name} = {name:'Max', age:28}
+// console.log(name) // Max
+// console.log(age) // undefined
+
+// in this course I wont use these
+// destructuring syntax too often
+// but I want you to be aware
+// of the existence of them
+// and there they are nice ways of
+// conveniently pulling out
+// certain elements from an array
+// || properties from an object
