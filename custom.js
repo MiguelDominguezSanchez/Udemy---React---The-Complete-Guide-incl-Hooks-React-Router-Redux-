@@ -739,3 +739,211 @@ person.printGender()
 // conveniently pulling out
 // certain elements from an array
 // || properties from an object
+
+// //// 9. Reference and Primitive Types Refresher
+
+// Over the last lectures
+// I introduced you to some of the most
+// important next generation
+// javascript features
+// which we are going to see in this course
+// our things definitely
+// All we want to cover
+// They are not next generation javascript
+// but they are features you might
+// have miss || forgotten,
+// and they are super important
+// to keep in mind
+
+// The first features || concept of javascript
+// I am talking about
+// is the fact that you have
+// reference and primitive types
+
+// If I create a number like this
+
+// const number = 1
+
+// then this is a primitive type
+// it means if I create a second number
+// 'num2' and set it equal to number,
+
+// const number = 1
+// const num2 = number
+
+// then it will actually create a real copy
+// of the number
+// so, num2 now of course
+// now if I log this
+
+// const number = 1
+// const num2 = number
+// console.log(num2)
+
+// but it will have copy the value '1' into 'num2'
+
+// Now numbers, strings, booleans,
+// these are so called primitive types,
+// whenever you reassign or restore
+// a variable in  another variable,
+// it will copy the value.
+
+// Objects and arrays are
+// reference types though
+
+// let me show you what I mean
+// I create my person object as a name here
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// and now I create a second person,
+
+// const person = {
+// 	name: 'Max'
+// }
+
+// const secondPerson
+
+// and assign person as a value here,
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// const secondPerson = person
+
+// if  I console.log(secondPerson)
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// const secondPerson = person
+// console.log(secondPerson)
+
+// and I hit run
+// it will print the second value
+// as first person
+
+// Object { name: "Max" }
+
+// it will not actually copy the person,
+// instead, person the object,
+// is stored in memory, and then the constant person
+// we store a pointer to that place in memory
+// and then if assign person to secondPerson
+// that pointer will  be copied
+
+// We can see that this is the case
+// if we change person dot name
+// after having it copied
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// const secondPerson = person
+
+// person.name = 'Manu'
+
+// console.log(secondPerson)
+
+// with that you would expect to
+// print 'Max' her still a person with name 'Max'
+// because we copied person stored in secondPerson
+// and there after change their name
+// however if we clear and run
+// you will see name 'Manu' here,
+
+// Object { name: "Manu" }
+
+// Even though I am printing the 'secondPerson'
+// so for secondPerson the name also change
+// the reason this is that
+// it just copied the pointer
+// and points to the exact same object
+// in memory as person does
+// so if we change name in person
+// we also change it for secondPerson
+// now that's important to keep in mind
+// and it is the same for arrays,
+// if you copy quotation marks array like this
+// and you change an array element
+// it will auto–change indeed the
+// so called copied array
+// this will become important in react,
+// because it can lead to unexpected
+// behaviors if you copy objects || arrays like this
+// because you then manipulate one object
+// in one place in the app
+// and accidentally manipulate
+// another usage of the same object
+// in another place of the app.
+
+// Therefore we will learn
+// techniques to copy this
+// in an immutable way
+// which means copy that
+// by really copying
+// the object and not just the pointer
+// for that we use this spread operator
+
+// Now we can simply create a new
+// person object here,
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// const secondPerson = {}
+
+// person.name = 'Manu'
+
+// console.log(secondPerson)
+
+// and spread the person properties
+
+// const person = {
+// 	name: 'Max',
+// }
+
+// const secondPerson = {
+// 	...person,
+// }
+
+// person.name = 'Manu'
+
+// console.log(secondPerson)
+
+// This will pull out the properties,
+// and the values of the properties from the object,
+// and add them to this newly created object here,
+// and we create a new one with the curly braces,
+// now if I clear and run,
+// we still print an object with name 'Max',
+
+// Object { name: "Max" }
+
+// even though we change the name to 'Manu' here,
+// because now we really created a real copy,
+// this is a technique that
+// I will also come back later in this course,
+// its just important to realize to keep in mind,
+// that objects and arrays are reference types
+// If you reassign them
+// you are copying the pointer,
+// not the value,
+// therefore if you want to do this
+// in a real copy way
+// you will have to create a new object
+// and just copy the properties
+// and not the entire object,
+
+// const secondPerson = {
+// 	...person
+// }
+
+// thats something very important
+// to keep in mind for this course.
