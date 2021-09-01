@@ -947,3 +947,135 @@ person.printGender()
 
 // thats something very important
 // to keep in mind for this course.
+
+// //// 10. Refreshing Array Functions
+
+// In the last lecture we have a look
+// at reference and primitive types
+// something super important to keep in mind
+// while working with javascript.In
+
+// Another thing you are gonna see a lot
+// in this course
+// are array functions
+// we have already saw a filter
+// a couple of lectures ago
+// sort, map, and so on.
+
+// let me quickly show you what I mean:
+
+// The good old numbers array,
+// with one, two, and three.
+
+// const numbers = [1,2,3]
+
+// now lets say  that we want
+// to turn this into an array
+// where each number is doubled
+// so we have the
+
+// 'const doubleNumbArray'
+
+// const numbers = [1,2,3]
+
+// const doubleNumArray
+
+// we can use an array function for this
+// we can take the numbers array
+
+// const doubleNumArray = numbers
+
+// and call 'map'
+
+// const numbers = [1, 2, 3]
+
+// const doubleNumArray = numbers.map()
+
+// map is a built in array method
+// and there are many of this methods
+// I will use quite a lot of that
+// and they are not next generation javascript
+// all this methods work in the same way though
+// take a function as an input
+
+// and this function which is an arrow function here
+// but it can be a normal function
+
+// const numbers = [1, 2, 3]
+
+// const doubleNumArray = numbers.map(() => {})
+
+// is then simply executed
+// on each element in the array here
+// so on each element in numbers array
+// one, and, two, and three
+
+// so therefore what we get in his arrow function
+// is a number in the end
+
+// const numbers = [1, 2, 3]
+
+// const doubleNumArray = numbers.map((num) => {})
+
+// but you can name this argument whatever you want
+// here we can simply return something
+
+// const numbers = [1, 2, 3]
+
+// const doubleNunArray = numbers.map((num) => {
+// 	return
+// })
+
+// and what you have to  do  in this internal function
+// depends on which array function you are using
+// check the docs in places
+// like the mozilla developer network
+// to learn more about the available array functions
+// so  in the map function
+// we have to return the new value
+// we want to tun the old one into
+
+// const numbers = [1, 2, 3]
+
+// const doubleNumArray = numbers.map((num) => {
+// 	return num * 2
+// })
+
+// so we could return num times two
+// and since it is executed in every element here
+// it will return two, four and six,
+// and conveniently map all the returns
+// a new array, so a real new array
+// just stored in 'doubleNumArray'
+// so now if I output numbers,
+// thereafter doubleNumArray
+// like this and now run
+
+// const numbers = [1, 2, 3]
+
+// const doubleNumArray = numbers.map((num) => {
+// 	return num * 2
+// })
+
+// console.log(numbers)
+// console.log(doubleNumArray)
+
+// you see the old one is unchanged,
+// and the new one holds double the values,
+
+// Array(3)[(1, 2, 3)]
+// Array(3)[(2, 4, 6)]
+
+// and we will explain what this functions do
+// when we use them in the course
+// I just want bring them to your attention right now
+// explain that we always have this function
+// which gets executed on each element
+// and that they are not next generation javascript
+// but normal javascript actually
+// be prepared to meet them
+// I will explain what they do
+// and when we see them
+// and always feel free to dive into docs
+// like the Mozilla Developer Network
+// to learn more about them
