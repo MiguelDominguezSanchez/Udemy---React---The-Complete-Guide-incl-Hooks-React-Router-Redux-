@@ -1079,3 +1079,215 @@ person.printGender()
 // and always feel free to dive into docs
 // like the Mozilla Developer Network
 // to learn more about them
+
+// //// //// 3. Understanding the Base Features & Syntax
+
+// //// 2. The Build Workflow
+
+// So we wanna set up a local react project
+// with local I mean we dont use code pen
+// but instead we will have a project on our machine
+// where we can work in with our own IDE || Editor
+// this of course is the way we wanna work with react
+// we wannato have it on our machine to have more features available there, it is a more convenient than using,
+// than using some web editor
+// and code pen which we use before
+// or jsbin which we use in the optional section
+// are really more playgrounds than work environments for real
+// projects
+// We will set up a local project
+// and react is actually more than just
+// importing the tool files we imported in code pen
+// we need a more elaborated workflow for build projects
+// and this is recommendable fo both
+// single page and multy applications
+// The question of course is why do we need a more
+// complex workflow and how then achieve it?
+
+// WHY?
+
+// Let me start with the why
+// We when building a real app
+// We want to actually optimize our code
+// We didnt care about this in the demo
+// project in the first course module in codepen
+// but for a big react application
+// we wanna ship code that is as small as possible
+// and as optimized as possible
+// obiously that increases the performance of our app
+// additionaly, and that is superimportant
+// we wanna use these 'Next Generation Javascript Features'
+// I talked you about in the last optional module.
+// Now we wanna use that because
+// it makes our life as a developer much easier.
+// And its default or entandar for react apps to use all these 'Next Generation Javascript Features'
+// Because the code is leaner, easier to read, faster, less error prompt, and many other reasons.
+// You should really use these Features. it is not just something nice optional,
+// I strongly recommend
+// using these features,
+// because it is considered the best practices
+// and it is what I teach you in this course,
+// because  obviously I want to teach you the best practices
+// So we wanna use the 'Next Generation Javascript Features'
+// to have nicer time to write less error prompt code,
+// And with all of that we need a workflow that support these features. Even on Codepen, we implicitly did this,
+// remember the pre–procesor we drop down,
+// when we switch to Babel,
+// that behind the scenes,
+// unlock a couple of build tools
+// that would parse our code
+// and support jsx
+// this html and javascript syntax
+// for example
+// So we wanna use these
+// 'Next Generation Javascript Features'
+// essentially we wanna be able to write ES6
+// || above and still ship code in the end
+// that runs on as many bowsers as possible,
+// and not that many browsers support these 'Next Gen Features'
+// that is what we need a build workflow
+// that actually compile these features.
+// Finally at the end we wanna be more productive
+// this includes 'Next Generation Javascript Features'
+// which often allows us to write more condensed code
+// but it also includes things like ES6 auto prefixing
+// you may know that CSS prefixing is a thing to achieve the broadest possible browser support, for css features.
+// Now manually adding these prefixes is quite annoying,
+// so automatically adding it is nice.
+// or considering Linkedin a tool which actually warms you if you are writing suboptimal code.
+// That would be nice to have too,
+// not strictly required but a nice feature.
+// all these things should be part of a build workflow, if now to implemented there a copule of tools.
+// that actually let them run over our code,
+// to even warn us in the case likedin,
+// or to compile the code, that runs on as many browsers as possible, while we as developers are writing
+// very modern code that would on its own
+// not run on that many browsers.
+// So thats the WHY.
+
+// A copule of reasons of Why
+// writing this kind of code is desirable
+// and why we need a more complex build workflow
+// that actually allows us to write this code
+// that actually opotimized the code for us.
+// And for that the how of course is relevant.
+
+// HOW?
+
+// How doo we achieve such a workflow
+// we first of all need a Dependency Managament Tool
+// Dependencies are simply third party libraries,
+// third party Javascript packages,
+// react for example is a dependency,
+// react-dom is a dependency,
+// and also all the build tools
+// We will neeed at the end are dependencies
+// so the compiler for Next Gen Javascript,
+// to Current Gen Javascript,
+// thats a dependency.
+// And we will use NPM here,
+// YARN could be another tool that we can use here,
+// butt we will use NPM,
+// Nodes Package Manager,
+// a tool which just allows to manage packages,
+// and we just the default estandar for managing
+// dependencies also on front end projects
+// Besides the Dependency Management Tool,
+// we need a Blunder,
+// because we wanna write moduular code,
+// and split it up over multiple files,
+// so that each file has a clear task
+// a clear focus
+// and therefore is easier for us
+// to maintain and manage,
+// but then we want to make sure
+// that all this code gets Bundled
+// into a couple of files at the end
+// when we ship it
+// because browser stone
+// even support split up files
+// older browsers this dont do
+// and it might also
+// even it they did support it
+// not be that optimal
+// to make thousands of requests
+// all these tiny focus files
+// so we want to have that Bundler
+// and we will use Webpack,
+// which is the default estandar
+// for bundling these days,
+// The cool thing about Webpack
+// it does not just Bundle files.
+// It also allow us apply
+// a couple of other build steps
+// beforre it dos this bundling,
+// for example the Menttioin Compilation
+// of 'Next Gen Javascript'
+// that requires another tool Babel.
+// We ned a compiler that does this
+// Javascript Compilation,
+// which means translation,
+// from modern features,
+// to work arrounds
+// that also work on older browsers
+// And we will use Babel plus presets
+// which can be hook into
+// the webpack configuration
+// so that they are part of
+// this blunding and optimization process
+// and finally at the end
+// we wanna use a Development server
+// to test our app lcally in our machine
+// Development server is a webserver
+// but oone runnning in our machine
+// we could open an html file
+// by doubleclicking on it
+// but this will us a file protocol
+// and woould not correctly emulates
+// the app running as it runs in a web server
+// so we need a web server
+// and we can oof course run on our local machine
+// the server is only accesible by us
+// but thats all we need as a developer
+// and there can read the cdn up run
+// as it will run at the end in a real server
+
+// We need all this things
+// and it sound as a super complex to set up
+// the good thing that it is not
+
+// I will present you a tool
+// that will create a project supporting
+// all this things out of the box
+// with zero configuration
+// in the next lectures
+
+// We will install this tool together
+// and it is a tool created by the react
+// team & community
+// and the officially recommended
+// way of creating new react apps
+
+// Because thats the general thing of this course
+// I teach you things in
+// the best practices and recommended way
+// so all of the set up
+// is quite easy
+
+// And as a side note
+// if you still want to dive into
+// how this works behind the scenes
+// you want to set up this from scratch
+// I also have a module for that
+// towards the end of the course
+// where we will build a react app
+// a react project
+// from scratch
+
+// Now with that you
+// know waht we need and how
+
+// Now lets dive into Dev Tool
+// I mentioned
+// and lets learn how we actually get started
+// with a new react project supporting all these features
