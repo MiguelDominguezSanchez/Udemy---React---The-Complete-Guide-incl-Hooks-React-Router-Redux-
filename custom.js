@@ -1441,3 +1441,134 @@ person.printGender()
 // in the next lecture.
 
 // //// 3 – 4. Understanding the Folder Structure
+
+// In the last lecture we created our project with 'create-react-app',
+// and as I mention make sure that 'npm start'
+// this process is running whenever you are working
+// I now open the folder which was created with
+// 'Microsoft Visual Studio Code'
+// this is the IDE I am going to use through the course
+// but you can use any IDE || editor you want to use,
+// For example Webstrom would be an alternative,
+// || Sublime || Atom,
+// || any other editor that you like
+// Now Here I installed a theme and some extension,
+// and you can find the exact configuration I am using
+// here described in the PDF document attached in the video,
+// just in case you want to use the same,
+// but feel free to use your favorite setup,
+// whatever the theme and setup you use,
+// you will have the same amount of files and folders,
+// in your project.
+// so lets now walk through all the files and folders in here,
+// On the root level we have a couple of configuration files
+// this log files here can basically be ignored,
+// they are login in the version  of  dependencies,
+// the general dependencies of the project attached,
+// are finally in the package dot json 'package.json'
+// There you can see that we have three dependencies in this project
+// and these were all created by 'create-react-app'
+// as you can see we obviously import react
+// here I am using released version of 16 at the point of time, you are viewing this,
+// this should be released,
+// 'react-dom' is the same,
+// and react scripts as I mention
+// is a package offering all of this
+// build workflow, this development server,
+// the 'Next Generation Javascript Features' support,
+// and all this thing, were using this project.
+// In the 'package.json' file,
+// there also a couple of scripts to find,
+// you can run the scripts with 'npm run' and the script name,
+// the exception is start, which can also run it with 'npm start'
+// the command to execute it.
+// And as you can see it uses this react script package, to then also execute some start command there,
+// thats simply a command, this the package makes available.And this command happens to start this development server,
+// watch all our code, compile our code, optimized code too,
+// and all these things,
+// once you are ready for deploying your app
+// you will run npm run build,
+// to optimized even more,
+// not launch a developer server,
+// but instead get your optimized code store in a folder,
+// because right now you wont see
+// you compiled code anywhere here,
+// everything happens in memory,
+//  but I come back to deploying
+//  the application later on the course.
+
+//  Lets close this 'package.json' file for now,
+//  The Node Modules folder holds all the dependencies
+// and dependencies of our project
+// that is what we have that many
+// We only have 'react', 'react-dom', and 'react scripts',
+// but react scripts have a lot of other dependencies, all this little build tools which compile code and so on,
+// you shouldn't´t added anything in the Node Modules folder,
+// it is generated automatically if you run 'npm install'
+// in your project folder, and its just automatically done by
+// create-react script.
+// The public folder is more interesting
+// it is basically the root folder
+// which gets served by the web at the end,
+// though in here it only holds the files we can add them
+// the script files are added in the source folder,
+// here we have one important file 'index.html'
+
+// This is a normal html file
+// and it is the single page we have here,
+// we will never add more html pages in this project,
+// if you are creating a multi–page project, you will create multiple sub–projects with create-react-app.
+// you wont add more html files here.
+// or you need your own workflow, if you wanna do that.
+// So thats the single page, where in the end our script files
+// will get injected by that build workflow.
+// Which is why you wont see script import here,
+// and you can add to this file, but we will write
+// any html code here.
+// I want too highlight this, the div with the id of root,
+// this will become important,
+// because this will be where we actually build our react application later, and we will of course work on react,
+// but if you need to add any imports, lets say any libraries,
+// css libraries, or want to add some meta data,
+// you can do that here, in the html file.
+// You can also add more html here, but again
+// you wanna probably wanna do that in react.
+
+// the 'manifest.json' file is there because
+// 'create-react-app' gives us a progressive web app
+// out of the box, a very basic one at least,
+// and give us this 'manifest.json' file where
+// we can define some meta data about our application
+// interesting for us is this source folder, we have a couple of files there, and these are actually the files,
+// we will work with, this is actually our react application
+// The most important for us by now,
+// the 'index.js' file, get access this root element in our dom,
+// our html file, so the element with the id of root,
+// which of course is this div we saw in the 'index.html' file.
+// this one
+// and there as you can see
+// it renders our react application with the render method
+// Now here in the reference,
+// there is some App object || element,
+// which we import from our app file the extension.js
+// is left out, because is automatically added auto–workflow,
+// And if we have a look at this 'app.js' file
+// therefore, this is where we see our first and only
+// react component we have in this starting project right now
+// Here we see some 'jsx'
+// ANd we will dive deeply into what we see exactly in the next  lectures.
+// For now lets remove all the content in this wrapping div,
+// and we simply add an h1 tag here whereas I say Hi, I'm a React App, with the closing of course also. And then lets save it, that's always important. Dont forget to save your files,
+// Now since you have 'npm start' running. This will automatically trigger a recompilation, and it should automatically reload your page too, which is why you should now see Hi I'm a React App, instead of the old content. With that we can also remove this 'log.svg' file, because we no longer use it on our project, and now we get a bit of a leaner source folder,
+// Now what else 'create-react-app' did for us.
+// It gave us this 'App.ccs' file which basically defines styling in our 'App.js' file, though I will say that these are not scoped to this file 'App.js', these are still logo styles, and I will actually remove everything, but this first .'App{text-align: center}' class definition, and save it there after. We also get the 'index.css' file, which applies styles globally, and which should be used for some general setup, as here for the body of our application, 'body{margin:0;padding:0;font-family:sans-serif;}'.
+// The 'registerServiceWorker.js' file is destined applied working for registering a service service worker which is generated automatically thats related to this web app we get out of the box, it will basically precast our script files, we dont need to configure anything there.
+// And the 'App.test' file, well we will dive into testing later in the course, basically it allows us to cerate unit test for the different units, for example components, in our application.
+
+// This is the general setup, and  for the majority of the course we will work in 'App.js' || other new component created.
+// Speaking of that lets analyze this file to  understand the  syntax there
+// lets get rid of that logo import because we removed the logo file, now that I see it.
+
+// Lets dive into 'jsx' what exactly is and how we add components to our application
+
+// //// 3 –
