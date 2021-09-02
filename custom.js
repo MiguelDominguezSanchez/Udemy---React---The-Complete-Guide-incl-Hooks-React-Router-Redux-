@@ -1,6 +1,8 @@
 // var myName = 'Max';
 // console.log(myName)
 
+const { version } = require('react')
+
 // myName  = 'Manu';
 // console.log(myName)
 
@@ -1085,11 +1087,11 @@ person.printGender()
 // //// 2. The Build Workflow
 
 // So we wanna set up a local react project
-// with local I mean we dont use code pen
+// with local I mean we don't use code pen
 // but instead we will have a project on our machine
 // where we can work in with our own IDE || Editor
 // this of course is the way we wanna work with react
-// we wannato have it on our machine to have more features available there, it is a more convenient than using,
+// we wanna to have it on our machine to have more features available there, it is a more convenient than using,
 // than using some web editor
 // and code pen which we use before
 // or jsbin which we use in the optional section
@@ -1100,7 +1102,7 @@ person.printGender()
 // importing the tool files we imported in code pen
 // we need a more elaborated workflow for build projects
 // and this is recommendable fo both
-// single page and multy applications
+// single page and multi page applications
 // The question of course is why do we need a more
 // complex workflow and how then achieve it?
 
@@ -1109,13 +1111,13 @@ person.printGender()
 // Let me start with the why
 // We when building a real app
 // We want to actually optimize our code
-// We didnt care about this in the demo
-// project in the first course module in codepen
+// We didn't care about this in the demo
+// project in the first course module in Codepen
 // but for a big react application
 // we wanna ship code that is as small as possible
 // and as optimized as possible
-// obiously that increases the performance of our app
-// additionaly, and that is superimportant
+// obviously that increases the performance of our app
+// additionally, and that is super important
 // we wanna use these 'Next Generation Javascript Features'
 // I talked you about in the last optional module.
 // Now we wanna use that because
@@ -1131,7 +1133,7 @@ person.printGender()
 // So we wanna use the 'Next Generation Javascript Features'
 // to have nicer time to write less error prompt code,
 // And with all of that we need a workflow that support these features. Even on Codepen, we implicitly did this,
-// remember the pre–procesor we drop down,
+// remember the pre–processor we drop down,
 // when we switch to Babel,
 // that behind the scenes,
 // unlock a couple of build tools
@@ -1143,7 +1145,7 @@ person.printGender()
 // 'Next Generation Javascript Features'
 // essentially we wanna be able to write ES6
 // || above and still ship code in the end
-// that runs on as many bowsers as possible,
+// that runs on as many browsers as possible,
 // and not that many browsers support these 'Next Gen Features'
 // that is what we need a build workflow
 // that actually compile these features.
@@ -1169,19 +1171,19 @@ person.printGender()
 // writing this kind of code is desirable
 // and why we need a more complex build workflow
 // that actually allows us to write this code
-// that actually opotimized the code for us.
+// that actually optimized the code for us.
 // And for that the how of course is relevant.
 
 // HOW?
 
 // How doo we achieve such a workflow
-// we first of all need a Dependency Managament Tool
+// we first of all need a Dependency Management Tool
 // Dependencies are simply third party libraries,
 // third party Javascript packages,
 // react for example is a dependency,
 // react-dom is a dependency,
 // and also all the build tools
-// We will neeed at the end are dependencies
+// We will need at the end are dependencies
 // so the compiler for Next Gen Javascript,
 // to Current Gen Javascript,
 // thats a dependency.
@@ -1190,11 +1192,11 @@ person.printGender()
 // butt we will use NPM,
 // Nodes Package Manager,
 // a tool which just allows to manage packages,
-// and we just the default estandar for managing
+// and we just the default standard for managing
 // dependencies also on front end projects
 // Besides the Dependency Management Tool,
 // we need a Blunder,
-// because we wanna write moduular code,
+// because we wanna write modular code,
 // and split it up over multiple files,
 // so that each file has a clear task
 // a clear focus
@@ -1206,7 +1208,7 @@ person.printGender()
 // when we ship it
 // because browser stone
 // even support split up files
-// older browsers this dont do
+// older browsers this don't do
 // and it might also
 // even it they did support it
 // not be that optimal
@@ -1214,36 +1216,36 @@ person.printGender()
 // all these tiny focus files
 // so we want to have that Bundler
 // and we will use Webpack,
-// which is the default estandar
+// which is the default standard
 // for bundling these days,
 // The cool thing about Webpack
 // it does not just Bundle files.
 // It also allow us apply
 // a couple of other build steps
-// beforre it dos this bundling,
-// for example the Menttioin Compilation
+// before it dos this bundling,
+// for example the Mention Compilation
 // of 'Next Gen Javascript'
 // that requires another tool Babel.
 // We ned a compiler that does this
 // Javascript Compilation,
 // which means translation,
 // from modern features,
-// to work arrounds
+// to work around
 // that also work on older browsers
 // And we will use Babel plus presets
 // which can be hook into
 // the webpack configuration
 // so that they are part of
-// this blunding and optimization process
+// this bundling and optimization process
 // and finally at the end
 // we wanna use a Development server
-// to test our app lcally in our machine
+// to test our app locally in our machine
 // Development server is a webserver
-// but oone runnning in our machine
+// but one running in our machine
 // we could open an html file
-// by doubleclicking on it
+// by double–clicking on it
 // but this will us a file protocol
-// and woould not correctly emulates
+// and would not correctly emulates
 // the app running as it runs in a web server
 // so we need a web server
 // and we can oof course run on our local machine
@@ -1285,9 +1287,157 @@ person.printGender()
 // from scratch
 
 // Now with that you
-// know waht we need and how
+// know what we need and how
 
 // Now lets dive into Dev Tool
 // I mentioned
 // and lets learn how we actually get started
 // with a new react project supporting all these features
+
+// //// 3 – 3. Using Create React App
+
+// In the las t section
+// I highlighted why set up a project
+// with some additional features
+// which  makes  our live as a developer easier
+// now as I also mention,
+// there is a tool that get such a project for us
+// called create-react-app, you can simply google for it,
+// to find a link to its official repository,
+// as I sayed is maintained
+// by basically facebook
+// || a community around facebook
+// so is the official recommended tool
+// for certain react projects
+// On their github pages, you will find installation instructions and a detailed explanation about what it does and how it works,
+// feel free to read through it, and of course you are also going to learn all about that through this course
+// lets start with the installation,
+// we installed globally 'npm'
+// and 'npm' is simply Nodes Packages Manager,
+// A tool you automatically get when installing Node.js
+// which makes easy to manage third party packages,
+// our javascript packages at the end.
+// And create-react-app is such a package.
+// To use 'npm' you need to install Node.js,
+// which can be download from Nodejs.org.
+// Now there you should pick the latest version
+// 8.5 in my case here, but if you are
+// facing any issues with that, try out the 6.11 || what ever the long term support version is in your case when you are viewing this page.
+// Now no worries, we are not going to write any Node.js code
+// here, you dont need to know Node.js,
+// we only need it to use its package manager,
+// and also for this development server,
+// which will be  span up for us automatically.So simply  clicks these buttons, download Node.js.
+// And will spin up the installer from which you can walk.
+
+// Once you finish the installation,
+// you should be able to run the 'npm'
+// command here on your machine.A
+// So lets do this together in the next step.
+
+// Now to use the create-react-app tool, you need you simply open up a terminal, command prompt on your machine,
+// and then there run 'npm install', and thats what you need Node.js for, it gives you  the 'npm tool',
+// npm instal create dash react dash app,
+// 'npm install creat-react-app'
+// and that important add dash g '-g' after,
+// is to install it globally on your machine,
+// so that you can this command,
+// from anywhere on your machine.
+
+// 'npm install create-react-app -g'
+
+// now on windows you can simply hit enter,
+// on mac and linux, you might need to add,
+// 'sudo' in front of this,
+// if you hit enter and have a permission error,
+// to get the right Permissions,
+// enow after you did hit enter, and of you are probably prompted to enter your password,
+// after all 'create-react-app' should be install,
+// now you can use that command to create a new project,
+// and you do so by running,
+// 'create-react-app', and then the name of your project,
+// and of the folder in which it will be installed.
+// Important before you run this command,
+// navigate into the path of your system
+// where you wanna create the default,
+// so here you are on the desktop
+// but with 'cd', of course you navigate to a different path,
+// then write 'create-react-app',
+// and then the name of your project,
+// which could be my-app ||
+// 'react-complete-guide' for example because that is
+// what this course is about,
+// and one important note,
+// to get the exact same folder structure as I have it,
+// since this changes overtime a bit,
+// and that you follow along perfectly,
+// to add something to this command,
+// so dont hit enter yet, instead add a white space,
+// and then add dash dash script dash version '--scripts-version',
+// so this is all in one in  the same command,
+// even though I split here into two lines,
+// on my machine, but  its in one command,
+// so dash dash scripts dash version,
+// and then a white space then 1 dot 1 dot 5,
+// Now this does not impact the version of react version,
+// you are using, you are using the latest version of react,
+// no worries, this simply  impacts the structure of the project,
+// we will change the structure through the course,
+// anyways, but to start at the same level,
+// to start use this command, you simply hit enter thereafter,
+// and the new project will be created for you,
+// so  this will now create a new folder,
+// and set everything up for you there,
+// you can ignore all the warnings,
+// you might getting here,
+// everything will be fine no worries,
+// so lets wait for this command to finish now,
+// and once it is finished,
+// you see a bunch of commands here,
+// you can run
+// you see yarn start,
+// yarn build,
+// because I have installed yarn,
+// which is an alternative to 'npm' in my machine too,
+// you will also run this commands,
+// 'npm start', 'npm run build' and so on,
+// First of all you have to navigate,
+// into the new created folder
+// so 'cd react-complete-guide',
+// you named the project,
+// like I did here,
+// and in there you can run,
+// 'npm start' to start your project,
+// and what this means is, it start a developer server,
+// it opens a new tab in our browser,
+// or at least it should open that tab,
+// in case it doesn't you  can manually open that tab,
+// and visit local host colon three–thousand there.
+
+// And this is a first project first demo,
+// that well is created for you,
+// which we can now edit,
+// this process here the 'npm start' process,
+// should be kept on running,
+// dont quit it,
+// you can always quit it by hitting control and 'c'
+// but if you quit it,
+// it will stop watching your files,
+// and as long as it keep running on the end,
+// it keeps watching your files,
+// and what this means is,
+// it means that whenever you change something in code,
+// this page will automatically reload
+// and reflect the latest changes
+// which is awesome.
+// So as soon as you are done developing
+// you can quit this,
+// as long as your developing keep this process running,
+// Now with that process running again, you
+// and the application running
+// in localhost 3000,
+// lets have a look at the folder that was cerated
+// and all the files we find in there
+// in the next lecture.
+
+// //// 3 – 4. Understanding the Folder Structure
