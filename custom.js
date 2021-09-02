@@ -1462,8 +1462,8 @@ person.printGender()
 // in your project.
 // so lets now walk through all the files and folders in here,
 // On the root level we have a couple of configuration files
-// this log files here can basically be ignored,
-// they are login in the version  of  dependencies,
+// this lock files 'packages-lock.json' here can basically be ignored,
+// they are login in the version of dependencies,
 // the general dependencies of the project attached,
 // are finally in the package dot json 'package.json'
 // There you can see that we have three dependencies in this project
@@ -1571,4 +1571,114 @@ person.printGender()
 
 // Lets dive into 'jsx' what exactly is and how we add components to our application
 
-// //// 3 –
+// //// 3 – 5. Understanding Component Basics
+
+// In the last lecture walk you through the folder structure
+// that was created by 'create-react-app',
+// and we added our an h1 to our 'App.js' file.
+
+// Let's now dive deep into
+// what we see here,
+
+// we see a react component,
+// As I explained React is all about creating components
+// basically custom html elements,
+// you could say
+// which there you can use,
+// to construct your application.
+// This App component actually get used in the 'index.js' file,
+// where we render it into the place of this root element,
+// And you could render a normal html element here to,
+// Test for example,
+// this will work, this is now no react component,
+// if I save this I see this h1 tag,
+// but of course then we haven't a real react application,
+// we are rendering a normal html element,
+// but we are not rendering our own react component,
+// now you could of course, use multiple react-dom renders,
+// and render all the html code you wanna use in your app.
+// Thats no really how you create react apps though,
+// typically, you render one root component,
+// the app component, but you can name it whatever you want
+// One root component in our case it is the app component,
+// name App, and in there you would nest the  other components the application might need, and of course these components,
+// can then all be nested into each other,
+// but all the way up to the top,
+// you only have one root component,
+// you could reach out to multiple notes
+// in html file, and mount different root component,
+// for different react apps,
+// all in the same project,
+// that would be possible, but it is not what we are doing here,
+// in the end you can of course simply replicate,
+// what you have learnt in this course,
+// for multiple applications,
+// in one of the same html file.
+
+// But lets stick to the general || typical usage of react
+// we have this app component,
+// which is defined in the 'app.js' file,
+// here we see one way,
+// one of two ways of defining a react component,
+// we create a javascript class,
+// with the 'class' keyword,
+// and then we use the 'extends' keyword,
+// to inherit from this component object || class
+// to be precise, which is imported up here,
+// from the react library.
+// Actually we import two things 'react',
+// which is the responsible || require for
+// rendering anything,
+// anything to the dom, we always need to import
+// that file where we define a component,
+// and of course the component file itself,
+// I will soon show a different way of creating components.
+// Now this class is one method,
+// the 'render' method,
+// it needs to have that, because react have to call this method to render something to the screen,
+// there is one important caveat every component has to do,
+// it has to return || render html code, and then  canwhich  can be render to the dom to the screen,
+// you can do other things as well,
+// reach out the internet,
+// do some calculations, listen to events,
+// whatever you need in your application,
+// we will see all of that in the course,
+// but you always also need to render html to the dom,
+// this is so important to keep in mind,
+// we then export this class at default export of this file,
+// this is a ES6 Feature and simply means,
+// if you import this whole file, you simply import this class,because is a default export,
+// we do use this in the 'index.js' file
+// where we import app from the app file,
+// again omitting this extension,
+// because its added by our build workflow
+// automatically for javascript files.
+// This App name here,
+// by the way is chosen arbitrarily,
+// but typically you use the name of the component
+// you also use in the file,
+// and it also will use as the file name,
+// One side–note, you might also see, this components with dot jsx
+// 'App.jsx' file extension instead of 'js'.
+// the reason   for this is  this code over–here.
+// I refer to it as html which is returned,
+// but at the end this is not html,
+// it looks like it,
+// but it is 'jsx',
+// so it is javascript looking a bit different,
+// and this can be confusing at first when you are learning react,
+// this might be one of the most confusing things actually,
+// important to know is,
+// this is just some syntactical sugar,
+// which was basically invented by the react team,
+// write it in a javascript files
+// because of the built workflow using here,
+// it will automatically transpile to valid javascript at the end,
+// its not connected to the file extension you are using,
+// dot '.js' and dot '.jsx' files,
+// and the convention nowadays is pretty much
+// always do jsx files, which is  what we are doing here to,
+// and simply is code or syntax that we can use to write html,
+// quotation marks while at the end not writing them,
+// sounds confusing
+// let me show what this is actually compiled to in the  next lecture
